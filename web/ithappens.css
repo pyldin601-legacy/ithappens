@@ -1,0 +1,81 @@
+@import "http://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,cyrillic";
+
+body { background: url(bg.png); overflow-x: hidden; max-width: 640px; margin:4px auto; }
+body,table { font-family: 'Open Sans', sans-serif; font-size: 16px; color: black; padding:0; }
+
+a { color: black; text-decoration: none; }
+a:link { color: black; text-decoration: none; }
+a:visited { color: black; text-decoration: none; }
+
+table.userlist { width:100%; margin-bottom:10px; }
+.al { text-align:left; }
+.ar { text-align:right; }
+.alc { text-align:center; }
+
+.green { color:#080; }
+.wide { width: 100%; }
+
+div.panel { background-color:rgba(128,128,128,0.2); margin:0; font-size:13px; text-align:center; width:100%; -moz-border-radius: 5px; -webkit-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px }
+
+table.userlist {  }
+table.userlist img { vertical-align:middle; margin-right:5px; width:16px; height:16px; }
+
+div.navigation { width:100%; text-align:center; margin: 5px 0;}
+div.pages { width: 100%; text-align: center; }
+div.search {	text-align: center;	background-color: rgba(128,128,128,0.2); width: 100%; padding: 10px 0; margin: 5px 0; }
+div.info { width:100%; text-align:center; }
+
+div.newcomment {	font-size: 12px; width: 100%; margin: 10px auto; text-align: center; }
+div.newcomment a { cursor:pointer; }
+div.newcomment .submitcomment .composer {	margin-top:5px;	text-align:center; }
+
+div.bordered { margin: 4px; }
+
+div.frame { background-color: rgba(128,128,128,0.2);	text-align: justify; width: 100%; margin: 5px 0; -moz-border-radius: 5px; -webkit-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px }
+
+div.prof_head { width:100%; text-align:center; }
+table.profile_table { font-size: 12px; width: 500px; margin: 0 auto; }
+
+table.list td { vertical-align:top; }
+table.list span.unread {  }
+table.list span.unread a { }
+table.list span.read { color:grey; }
+table.list span.read a { color:grey; }
+
+span.views { font-size:12px; }
+
+tr#reg { font-size: 12px; font-weight: normal; text-align: left; height: 30px; }
+tr#screen { text-align: center; }
+
+div#page { width: 100%; position: relative; left: 0px; margin: 0 auto; text-align: center; }
+div#error { color: red; width: 270px; font-size: 12px; font-weight: normal; text-align: center; margin: 0 auto; }
+
+
+div#controls { position: relative; text-align: center; margin: 20px 0px 0px 0px; }
+div#register { position: relative; text-align: center; margin: 0 auto; width: 100%; max-width: 600px; }
+div#reglink { font-size: 12px; font-weight: normal; }
+div#bottomlinks { width: 270px; position: relative; margin: 0 auto; }
+form#regform { margin: 0 auto; width: 270px; }
+
+p { text-indent: 20px; margin: 0px; }
+
+a#current { font-weight: bold; }
+
+a { padding: 0 2px }
+a:hover { background-color: rgba(0,0,0,0.1); -moz-border-radius: 5px; -webkit-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px }
+
+div.title { font-size:18px; font-weight:bold; text-align:center; width: 100%; margin: 5px auto; }
+span.hl { background-color:grey; color:white; }
+div.bar { text-align: center; width: 100%; font-size: 12px; margin: 5px 0; }
+
+div.sbody { background-color: rgba(128,128,128,0.2); text-align: justify; width: 100%; margin: 5px 0; -moz-border-radius: 5px; -webkit-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px }
+div.sbody a { text-decoration:underline; }
+div.tags  { text-align: left; font-size:12px; margin-left: 5px; }
+div.tags a  { color: #006; text-decoration: none; }
+div.books { text-align:left; font-size:12px; margin-left: 5px; margin-bottom:4px; }
+div.books a { color: #006; text-decoration: none; font-weight:bold; }
+
+table.newpanel { width:100%; }
+table.newpanel td { text-align:center; width:20%; }
+table.newpanel td a { display:block; border:none; }
+table.newpanel td span.sub { color:grey; }

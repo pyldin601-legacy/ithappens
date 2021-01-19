@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>:{story_title} - IT Happens</title>
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="/styles/main.css" >
+		<script src="/js/jquery-1.7.1.min.js"></script>
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="ith_page_wrap">
+			<div class="ith_page_head navbar navbar-default navbar-inverse navbar-static-top">
+				<div class="container">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#">Домой</a></li>
+							<li><a href="#">Истории <span class="badge">:{stories_total}</span></a></li>
+							<li><a href="#">Прочитано <span class="badge">:{stories_read}</span></a></li>
+							<li><a href="#">Закладки <span class="badge">:{stories_bookmarked}</span></a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="/login.php">Авторизация</a></li>
+						</ul>
+				</div>
+			</div>
+			<div class="container ith_page_body">
+				<div class="row">
+					<div class="col-lg-9 col-md-9">
+						<div class="ith_story_title">
+							<h2><a href="/story/:{story_number}">#:{story_number}</a> :{story_title}<br><small>:{story_date}</small></h2>
+						</div>
+						<div class="ith_story_text">
+							<div class="ith_text_body">:{story_text}</div>
+						</div>
+						<div class="ith_story_tags">Тэги:
+							<div class="btn-group">
+								:{tag_list}
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 hidden-xs hidden-sm">
+						<h4>Лучшие истории</h4>
+					</div>
+				</div>
+				<div class="ith_story_navs">
+					<div class="btn-group btn-group-lg">
+						<a href="/story/:{story_previous}" class="btn btn-default :{prev_disable}">Предыдущая</a>
+						<a href="/bookmark/:{story_number}" class="btn btn-default :{bookmark_disable}">В закладки</a>
+						<a href="/story/:{story_next}" class="btn btn-default :{next_disable}">Следующая</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<!-- @@tags <a href="/tag/:{tag_name}" class="btn btn-default">#:{tag_name}</a> -->

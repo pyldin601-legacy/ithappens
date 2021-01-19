@@ -1,0 +1,15 @@
+RewriteEngine on
+
+RewriteRule ^story/(\d*)$ index.php?story=$1
+RewriteRule ^bookmark/(\d+)$ bookmark.php?story=$1
+RewriteRule ^search/(.*)/(.*)/(\d*)$ search.php?mode=$1&query=$2&page=$3
+RewriteRule ^bookmarks/(\d*)[;]{0,1}(\d*) bookmarks.php?page=$1&user=$2
+RewriteRule ^readlist/(\d*)$ list.php?page=$1&read=1
+RewriteRule ^list/(\d*)$ list.php?page=$1
+RewriteRule ^logout/(\d*)$ logout.php?st=$1
+RewriteRule ^login/(\d*)$ login.php
+
+#RewriteRule ^file/(.*)$ search/download.php?filename=$1
+#RewriteRule ^fs/([./]*)$ search/nav.php?path=$1
+#RewriteRule ^hear/(\d+)$ search/restreamer.php?index=$1
+#RewriteRule ^preview/(\d+)$ search/preview.php?index=$1

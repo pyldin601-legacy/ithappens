@@ -1,0 +1,29 @@
+version: "3.5"
+
+services:
+  db:
+    build:
+      context: db
+    environment:
+      - MYSQL_DATABASE=it
+      - MYSQL_USER=it
+      - MYSQL_PASSWORD=it
+      - MYSQL_ALLOW_EMPTY_PASSWORD=true
+    volumes:
+      - mysql-data:/var/lib/mysql
+  web:
+    restart: on-failure
+    build:
+      context: web
+    environment:
+      - MYSQL_HOSTNAME=db
+      - MYSQL_DATABASE=it
+      - MYSQL_USER=it
+      - MYSQL_PASSWORD=it
+    depends_on:
+      - db
+    ports:
+      - 6001:80
+volumes:
+  mysql-data:
+    driver: local
