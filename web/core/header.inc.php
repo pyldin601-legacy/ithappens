@@ -13,7 +13,7 @@ function sh_topbar() {
 	if($uid) {
 		$auth_user = strlen($uid['user_fullname']) ? $uid['user_fullname'] : $uid['user_login'];
 		$read_by = (int)mysql_result(mysql_query("select count(*) from `ithappens_read` where `user_id` = '${uid['user_id']}'"), 0, 0);
-		$lb = "<td><a href='/web/profile.php'>Мой<br>профиль</a></td>";
+		$lb = "<td><a href='/profile.php'>Мой<br>профиль</a></td>";
 	} else {
 		$read_by = 0;
 		$lb = '<td><a href="/login.php?st=' . $default_story . '">Войти</a></td>';

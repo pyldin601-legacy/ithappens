@@ -55,6 +55,7 @@ $rows = mysql_num_rows($result);
 
 $panel_contents = sh_topbar();
 $pages = ceil($rows / $cfg['stories_per_page']);
+$navig_links = sh_navig();
 
 ?>
 

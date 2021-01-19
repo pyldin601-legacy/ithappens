@@ -53,9 +53,8 @@ if($uid) {
 		mysql_query("insert into `ithappens_read` (`user_id`, `story_id`) values ('${uid['user_id']}', '${default_story}')");
 }
 
-
-echo tmpl_get_story_template($default_story, $s_title, $s_date, $s_body, $my_tags, 2, -1);
-exit();
+$panel_contents = sh_topbar();
+$navig_links = sh_navig();
 
 echo "<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN'>";
 echo "<HTML>";
@@ -73,7 +72,7 @@ echo "</HEAD>";
 echo "<BODY>";
 echo "<div class='panel'>$panel_contents</div>";
 echo "<div class='title'><a href='/story/$default_story'>$default_story: $s_title</a></div>";
-echo "<div class='bar'>От $s_date (просм.: $s_reads/$reads)</div>";
+echo "<div class='bar'>От $s_date (просм.: $s_reads/$s_reads)</div>";
 echo "<div class='sbody'><div style='padding:5px;'>$s_body</div></div>";
 if($pos > 0) { echo "<div class='books'>Эта история по нраву: $names</div>"; } 
 echo "<div class='tags'>Теги: $my_tags</div>";
