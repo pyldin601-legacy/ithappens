@@ -21,7 +21,9 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: pldin601/ithappens-db:latest
+          tags: |
+            pldin601/ithappens-db:latest
+            pldin601/ithappens-db:${{ github.sha }}
           context: db
   build-web:
     name: Build web
@@ -38,7 +40,9 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: pldin601/ithappens-web:latest
+          tags: |
+            pldin601/ithappens-web:latest
+            pldin601/ithappens-web:${{ github.sha }}
           context: web
 #  deploy:
 #    needs:
