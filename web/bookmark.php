@@ -25,5 +25,3 @@ if ($uid) {
 db_close();
 header('Location: /story/' . $story);
 
-?>
-

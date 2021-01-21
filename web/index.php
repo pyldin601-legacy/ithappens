@@ -45,6 +45,11 @@ while($row = mysql_fetch_assoc($books)) {
 	if(mysql_num_rows($books) > $pos) $names .= ", ";
 }
 
+if ($uid && @$_GET['story']) {
+	$story_escaped = mysql_real_escape_string($_GET['story']);
+	mysql_query("update `ithappens_auth` set `st_current` = ${story_escaped} where `user_id` = ${uid['user_id']}");
+}
+
 if($uid) {
 	$ret = mysql_query("select * from `ithappens_read` where `user_id` = '${uid['user_id']}' and `story_id` = '${default_story}' limit 1");
 	if($ret)
